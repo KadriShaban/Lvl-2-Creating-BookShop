@@ -9,10 +9,10 @@ app.use(express.json());
 app.use(cors());
 
 const db = mysql.createConnection({
-  host: "srv1339.hstgr.io",
-  user: "u242778090_kadrishaban55",
-  password: "Nilofer567",
-  database: "u242778090_kadrishaban55",
+  host: "sql12.freemysqlhosting.net",
+  user: "sql12709909",
+  password: "jakAbpl4vZ",
+  database: "sql12709909",
 });
 
 app.get("/", (req, res) => {
