@@ -8,7 +8,9 @@ const Books = () => {
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/books");
+        const res = await axios.get(
+          "https://lvl-2-creating-bookshop-1.onrender.com/books"
+        );
         setBooks(res.data);
         console.log(res);
       } catch (err) {
