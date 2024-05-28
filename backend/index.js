@@ -1,8 +1,12 @@
 import express from "express";
 import mysql from "mysql";
 import cors from "cors";
+import dotenv from "dotenv";
 
 const app = express();
+
+app.use(express.json());
+app.use(cors());
 
 const db = mysql.createConnection({
   host: "srv1339.hstgr.io",
@@ -10,9 +14,6 @@ const db = mysql.createConnection({
   password: "Nilofer567",
   database: "u242778090_kadrishaban55",
 });
-
-app.use(express.json());
-app.use(cors());
 
 app.get("/", (req, res) => {
   res.json("hello this is backend");
